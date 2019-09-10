@@ -6,7 +6,7 @@ var gulp = require('gulp'),
 		concat = require('gulp-concat'),
 		uglify = require('gulp-uglify'),
 		imagemin = require('gulp-imagemin');
-		
+
 var config = {
 	stylesPath: 'assets/styles',
 	jsPath: 'assets/scripts',

@@ -1,0 +1,547 @@
+$header-font: 'Neuton', serif
+$chinese-font: 'Noto Sans TC', sans-serif
+$body-font: 'Open Sans', sans-serif
+
+$link-color: #831deb
+$link-color: #9137EB
+$link-color-hover: #bb07ec
+
+$mobile-cta-height: 60px
+
+body.landing-page
+
+  background: url('../images/old_wall.png') repeat
+  font-family: $body-font
+  font-size: 16px
+  line-height: 1.6
+  font-size: 1rem
+  position: relative
+  padding-bottom: $mobile-cta-height
+  @include media-breakpoint-up(md)
+    font-size: 1.2rem
+    padding-top: 50px
+    padding-bottom: 0
+
+  .top-bar
+    background-color: transparent
+    width: 100%
+    padding: 1rem
+    display: flex
+    justify-content: center
+    //border-bottom: solid black 2px
+    background: url('../images/header-bg-2.png') top left repeat-x
+    background-position: 50% 50%
+    @include media-breakpoint-up(md)
+      //background-color: #000
+      position: fixed
+      top: 0
+      z-index: 9999
+    img
+      width: 100%
+      max-width: 400px
+
+  .mobile-cta
+    position: fixed
+    bottom: 0
+
+    height: $mobile-cta-height
+    width: 100%
+
+    background: url('../images/header-bg-2.png') top left repeat-x
+    box-shadow: 0 0 45px 5px rgba(0,0,0,0.4)
+
+    display: flex
+    justify-content: center
+    align-items: center
+
+    a
+      font-family: $body-font
+      font-weight: bold
+      font-size: 1.8rem
+      color: #fff
+
+    @include media-breakpoint-up(md)
+      display: none
+
+  .flex
+    display: flex
+
+  p
+    margin-bottom: 1.6rem
+
+  a
+    color: $link-color
+    text-decoration: none
+    &:hover, &:focus, &:active
+      text-decoration: none
+      color: $link-color-hover
+
+
+  .chinese
+    font-family: $chinese-font
+
+  h1, h2, h3, h4
+    font-family: $header-font
+
+  h3
+    font-weight: 300
+    strong
+      font-weight: 400
+
+
+  a.radical-btn
+    padding: 1rem 2rem
+    border: solid $link-color 4px
+    font-family: $body-font
+    font-weight: bold
+    font-size: 1.8rem
+    border: none
+    background-color: $link-color
+    background: url('../images/button-bg.png') top left no-repeat
+    background-position: 45% 20%
+    color: #fff
+
+    &:hover, &:active, &:focus
+      text-decoration: none
+      //border-color: $link-color-hover
+      //background-color: $link-color-hover
+      color: #fff
+      //background: url('../images/button-bg-hover.png') top left no-repeat
+      background-position: 45% 20%
+
+
+
+  .cta
+    padding-top: 5rem
+    text-align: center
+    .radical-btn
+      display: block
+      width: 100%
+      font-size: 1.4rem
+      padding: 1rem
+      text-transform: uppercase
+      text-align: center
+      span
+        line-height: 2rem
+      span.chinese
+        display: none
+        font-family: $chinese-font
+        font-size: 2rem
+      span.english
+        display: block
+      &:hover
+        span.chinese
+          display: block
+        span.english
+          display: none
+
+
+
+.chinese-block
+  width: 33%
+  background-color: #fff
+.character123
+  width: 100%
+  max-width: 200px
+  position: relative
+  &:after
+    content: ""
+    display: block
+    padding-bottom: 100%
+  .content
+    position: absolute
+    width: 100%
+    height: 100%
+    img
+      width: 100%
+      height: auto
+
+
+.container-fluid
+  max-width: 1200px
+
+
+
+.text-box
+  margin: 2rem 0
+  padding: 1rem 1rem
+  @include media-breakpoint-up(sm)
+    padding: 1.5rem 1.5rem
+  @include media-breakpoint-up(md)
+    padding: 1.5rem 1.8rem
+  @include media-breakpoint-up(lg)
+    margin: 2rem 0
+    padding: 2rem
+  background-color: rgba(255,255,255,0.6)
+  border-radius: 1rem
+
+  &.info-box
+    display: flex
+    justify-content: center
+    align-items: center
+    flex-direction: column
+    @include media-breakpoint-up(sm)
+      flex-direction: row
+    i
+      font-size: 4rem
+      padding-bottom: 1rem
+      @include media-breakpoint-up(sm)
+        padding-right: 2rem
+        padding-bottom: 0rem
+    .info-icon
+      width: 100%
+      max-width: 100px
+      margin-bottom: 1rem
+      @include media-breakpoint-up(sm)
+        margin-right: 2rem
+        margin-bottom: 0
+        width: 25%
+      @include media-breakpoint-up(lg)
+        width: 20%
+      img
+        width: 100%
+        height: auto
+        margin-right: 2rem
+    .text-box-content
+      @include media-breakpoint-up(sm)
+        width: 75%
+      @include media-breakpoint-up(lg)
+        width: 80%
+
+  p
+    font-size: 1rem
+    @include media-breakpoint-up(md)
+      font-size: 1.2rem
+    font-weight: normal
+    &:last-of-type
+      margin-bottom: 0
+
+
+header
+  min-height: 100vh
+  padding: 4rem 0 4rem 0
+  @include media-breakpoint-up(lg)
+    padding: 4rem 0 8rem 0
+
+  .brand
+    display: flex
+    flex-direction: column
+    justify-content: center
+    align-items: center
+    padding: 0 1rem 6rem
+    .logo
+      width: 100%
+      max-width: 160px
+      margin-bottom: 2rem
+      img
+        width: 100%
+        height: auto
+    .tag
+      width: 100%
+      max-width: 550px
+      img
+        width: 100%
+        height: auto
+
+section
+  padding: 8rem 0
+
+  .section-header
+    display: flex
+    flex-direction: column
+    justify-content: center
+    align-items: center
+    .title-img
+      margin-bottom: 2rem
+      img
+        max-width: 500px
+        width: 100%
+        height: auto
+    h3.sub-heading
+      max-width: 700px
+      text-align: center
+      font-size: 1.4rem
+      @include media-breakpoint-up(md)
+        font-size: 1.6rem
+      @include media-breakpoint-up(lg)
+        font-size: 1.8rem
+
+
+  &.intro
+    display: flex
+    justify-content: center
+    padding-top: 0
+    padding-bottom: 0
+    @include media-breakpoint-up(md)
+      padding-left: 3rem
+      padding-right: 3rem
+    @include media-breakpoint-up(lg)
+      padding-left: 0
+      padding-right: 0
+    .intro-1
+      display: flex
+      flex-direction: column
+      justify-content: space-between
+      .details-1
+        display: none
+        @include media-breakpoint-up(md)
+          display: block
+
+      .details-2
+        display: none
+        @include media-breakpoint-up(md)
+          display: block
+        @include media-breakpoint-up(lg)
+          display: none
+
+      .details-3
+        display: none
+        @include media-breakpoint-up(md)
+          display: block
+
+    .intro-2
+      padding-left: 2rem
+      padding-right: 2rem
+      @include media-breakpoint-up(md)
+        padding-left: 15px
+        padding-right: 15px
+      img
+        width: 100%
+        height: auto
+        box-shadow: 0 0 5rem -1.5rem rgba(0, 0, 0, 0.5)
+
+    .intro-3
+      display: flex
+      justify-content: center
+      flex-direction: column
+      align-items: center
+      padding-top: 3rem
+
+      @include media-breakpoint-up(sm)
+        flex-wrap: wrap
+        flex-direction: row
+      @include media-breakpoint-up(md)
+        flex-direction: column
+        padding-top: 0
+
+      .details-1
+        @include media-breakpoint-up(md)
+          display: none
+
+      .details-2
+        @include media-breakpoint-up(md)
+          display: none
+        @include media-breakpoint-up(lg)
+          display: block
+
+      .details-3
+        @include media-breakpoint-up(md)
+          display: none
+
+
+    .details
+      width: 100%
+      padding: 3rem 1rem
+      max-width: 350px
+      @include media-breakpoint-up(sm)
+        width: 50%
+      @include media-breakpoint-up(md)
+        width: 100%
+        padding: 3rem 0
+      img
+        width: 100%
+        height: auto
+
+      @include media-breakpoint-up(md)
+        margin-bottom: 0
+
+
+  &.why
+    background: url('../images/paper.jpg') repeat
+    box-shadow: 0 0 5rem -1.5rem rgba(0, 0, 0, 0.4)
+
+    h2
+      font-weight: 400
+      font-size: 2rem
+      @include media-breakpoint-up(md)
+        font-size: 2.6rem
+    h3
+      font-weight: 300
+      font-size: 1.4rem
+      margin-bottom: 2rem
+      @include media-breakpoint-up(md)
+        font-size: 1.8rem
+
+
+    .text-box.example-radical
+      display: flex
+      flex-direction: column
+      @include media-breakpoint-up(md)
+        flex-direction: row
+      .radical
+        width: 100%
+        background-color: rgba(0,0,0,0.05)
+        border-radius: 1rem
+        margin-bottom: 2rem
+        display: flex
+        justify-content: center
+        @include media-breakpoint-up(md)
+          max-width: 200px
+          margin-bottom: 0
+        img
+          width: 100%
+          max-width: 200px
+          height: auto
+          @include media-breakpoint-up(md)
+            width: 180px
+          @include media-breakpoint-up(lg)
+            width: 150px
+          @include media-breakpoint-up(xl)
+            width: 120px
+
+
+      p
+        @include media-breakpoint-up(md)
+          margin-left: 2rem
+
+
+    .examples
+      display: flex
+      justify-content: space-around
+      flex-wrap: wrap
+      margin: 0
+      @include media-breakpoint-up(sm)
+        justify-content: space-between
+      .character
+        //background-color: #fff
+        border-radius: 1rem
+        padding: 2rem
+        text-align: center
+        width: 50%
+        @include media-breakpoint-up(sm)
+          width: 32%
+        @include media-breakpoint-up(lg)
+          width: 25%
+        h2
+          font-size: 1.8rem
+
+        img
+          width: 100%
+          height: auto
+
+  &.anatomy
+    .section-header
+      .title-img
+        img
+          max-width: 300px
+    .anatomy-diagram
+      padding: 4rem 0
+      img
+        width: 100%
+        height: auto
+    .diagram-key
+      ul
+        list-style: none
+        li
+          margin-bottom: 1.6rem
+          padding-left: 1.5rem
+          position: relative
+          span
+            font-weight: bold
+            margin-right: 0.5rem
+            position: absolute
+            left: -1.5rem
+            padding-left: -1rem
+            position: relative
+            display: block
+            font-size: 115%
+            @include media-breakpoint-up(md)
+              font-size: 110%
+            @include media-breakpoint-up(lg)
+              font-size: 105%
+
+    .radical_comparison
+      display: flex
+      flex-direction: column
+      justify-content: center
+      align-items: center
+      padding: 3rem 0
+      @include media-breakpoint-up(sm)
+        flex-direction: row
+        justify-content: center
+      .radical
+        width: 100%
+        max-width: 300px
+        padding: 0 2rem
+        margin-bottom: 3rem
+        &:last-of-type
+          margin-bottom: 0
+        @include media-breakpoint-up(sm)
+          margin-bottom: 0
+        img
+          width: 100%
+          height: auto
+
+  &.ready
+    $poster-height-sm: 200px
+    $poster-height-md: 300px
+    $poster-height-lg: 400px
+    z-index: 999
+    background: url('../images/paper.jpg') repeat
+    box-shadow: 0 0 5rem -1.5rem rgba(0, 0, 0, 0.4)
+    position: relative
+    overflow: hidden
+    padding-bottom: $poster-height-sm
+    @include media-breakpoint-up(md)
+      padding-bottom: $poster-height-md
+    @include media-breakpoint-up(lg)
+      padding-bottom: $poster-height-lg
+    .cta
+      padding: 4rem 0
+    .poster-row
+      width: 100%
+      position: absolute
+      background-size: cover
+      background-position: 50% 0
+      bottom: -14px
+      @include media-breakpoint-up(md)
+        bottom: -30px
+      height: $poster-height-sm
+      @include media-breakpoint-up(md)
+        height: $poster-height-md
+      @include media-breakpoint-up(lg)
+        height: $poster-height-lg
+
+  &.footer
+    padding: 0
+    position: absolute
+    bottom: 0
+    z-index: 9999
+
+    height: $mobile-cta-height
+    width: 100%
+
+    background: #fff url('../images/header-bg-2.png') top left repeat-x
+    box-shadow: 0 0 45px 5px rgba(0,0,0,0.4)
+
+    display: flex
+    justify-content: center
+    align-items: center
+    color: #fff
+    font-family: $body-font
+    font-weight: bold
+    font-size: 1rem
+    @include media-breakpoint-up(sm)
+      font-size: 1.4rem
+    @include media-breakpoint-up(md)
+      font-size: 1.5rem
+    @include media-breakpoint-up(lg)
+      font-size: 1.6rem
+
+    a
+      color: #fff
+      filter: drop-shadow(4px 1px 0px #9137EB)
+      &:hover
+        color: #fff
+
+
