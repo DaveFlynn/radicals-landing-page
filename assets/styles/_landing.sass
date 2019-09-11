@@ -6,7 +6,7 @@ $link-color: #831deb
 $link-color: #9137EB
 $link-color-hover: #bb07ec
 
-$mobile-cta-height: 60px
+$mobile-cta-height: 45px
 
 body.landing-page
 
@@ -31,8 +31,10 @@ body.landing-page
     //border-bottom: solid black 2px
     background: url('../images/header-bg-2.png') top left repeat-x
     background-position: 50% 50%
+    display: none
     @include media-breakpoint-up(md)
       //background-color: #000
+      display: flex
       position: fixed
       top: 0
       z-index: 9999
@@ -57,7 +59,7 @@ body.landing-page
     a
       font-family: $body-font
       font-weight: bold
-      font-size: 1.8rem
+      font-size: 1.5rem
       color: #fff
 
     @include media-breakpoint-up(md)
@@ -112,12 +114,14 @@ body.landing-page
 
 
   .cta
-    padding-top: 5rem
+    padding-top: 2rem
     text-align: center
+    @include media-breakpoint-up(md)
+      padding-top: 5rem
     .radical-btn
       display: block
       width: 100%
-      font-size: 1.4rem
+      font-size: 1.3rem
       padding: 1rem
       text-transform: uppercase
       text-align: center
@@ -219,7 +223,9 @@ body.landing-page
 
 header
   min-height: 100vh
-  padding: 4rem 0 4rem 0
+  padding: 1rem 0 4rem 0
+  @include media-breakpoint-up(md)
+    padding: 4rem 0 4rem 0
   @include media-breakpoint-up(lg)
     padding: 4rem 0 8rem 0
 
@@ -228,11 +234,16 @@ header
     flex-direction: column
     justify-content: center
     align-items: center
-    padding: 0 1rem 6rem
+    padding: 0 1rem 2rem
+    @include media-breakpoint-up(md)
+      padding: 0 1rem 6rem
     .logo
       width: 100%
-      max-width: 160px
+      max-width: 100px
       margin-bottom: 2rem
+      @include media-breakpoint-up(md)
+        max-width: 160px
+
       img
         width: 100%
         height: auto
@@ -244,7 +255,9 @@ header
         height: auto
 
 section
-  padding: 8rem 0
+  padding: 4rem 0
+  @include media-breakpoint-up(md)
+    padding: 8rem 0
 
   .section-header
     display: flex
@@ -341,10 +354,11 @@ section
 
     .details
       width: 100%
-      padding: 3rem 1rem
+      padding: 1.5rem 1rem
       max-width: 350px
       @include media-breakpoint-up(sm)
         width: 50%
+        padding: 3rem 1rem
       @include media-breakpoint-up(md)
         width: 100%
         padding: 3rem 0
@@ -418,8 +432,13 @@ section
         padding: 2rem
         text-align: center
         width: 50%
+        &:last-of-type
+          display: none
         @include media-breakpoint-up(sm)
           width: 32%
+        @include media-breakpoint-up(sm)
+          &:last-of-type
+            display: block
         @include media-breakpoint-up(lg)
           width: 25%
         h2
@@ -442,19 +461,23 @@ section
     .diagram-key
       ul
         list-style: none
+        padding: 0
+        margin: 0
         li
           margin-bottom: 1.6rem
-          padding-left: 1.5rem
-          position: relative
+          @include media-breakpoint-up(md)
+            padding-left: 1.5rem
+            position: relative
           span
             font-weight: bold
-            margin-right: 0.5rem
-            position: absolute
-            left: -1.5rem
-            padding-left: -1rem
-            position: relative
             display: block
             font-size: 115%
+            @include media-breakpoint-up(md)
+              margin-right: 0.5rem
+              position: absolute
+              left: -1.5rem
+              padding-left: -1rem
+              position: relative
             @include media-breakpoint-up(md)
               font-size: 110%
             @include media-breakpoint-up(lg)
@@ -483,6 +506,7 @@ section
           height: auto
 
   &.ready
+    $poster-height-xs: 125px
     $poster-height-sm: 200px
     $poster-height-md: 300px
     $poster-height-lg: 400px
@@ -491,7 +515,9 @@ section
     box-shadow: 0 0 5rem -1.5rem rgba(0, 0, 0, 0.4)
     position: relative
     overflow: hidden
-    padding-bottom: $poster-height-sm
+    padding-bottom: $poster-height-xs
+    @include media-breakpoint-up(sm)
+      padding-bottom: $poster-height-sm
     @include media-breakpoint-up(md)
       padding-bottom: $poster-height-md
     @include media-breakpoint-up(lg)
@@ -504,9 +530,10 @@ section
       background-size: cover
       background-position: 50% 0
       bottom: -14px
+      height: $poster-height-xs
       @include media-breakpoint-up(md)
         bottom: -30px
-      height: $poster-height-sm
+        height: $poster-height-sm
       @include media-breakpoint-up(md)
         height: $poster-height-md
       @include media-breakpoint-up(lg)
