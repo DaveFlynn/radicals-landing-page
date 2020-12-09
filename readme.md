@@ -1,6 +1,6 @@
-# Bootstrap 4 project boilerplate
+# Chinese Radicals Scroll Landing page
 
-A boilerplate for Bootstrap 4, FontAwesome and jQuery using Yarn and Gulp
+Landing page for the [Mandarin Poster](https://mandarinposter.com) Chinese Radicals Scroll poster.
 
 
 ## Installation
